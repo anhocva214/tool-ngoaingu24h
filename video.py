@@ -56,4 +56,4 @@ def GetAllVideoInCourseById(id):
 
 
 
-GetAllVideoInCourseById("5958158015004672")
+GetAllVideoInCourseById("id")
