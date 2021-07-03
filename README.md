@@ -1,5 +1,6 @@
 ## Tool lấy khoá học từ ngoaingu24h
-
+![Demo 1](https://github.com/anhocva214/tool-ngoaingu24h/blob/master/img/demo-1.jpg)
+![Demo 2](https://github.com/anhocva214/tool-ngoaingu24h/blob/master/img/demo-2.jpg)
 ### Hướng dãn cài đặt:
 1. Cài đặt python
 2. Cài đặt các thư viên python cần thiết:
