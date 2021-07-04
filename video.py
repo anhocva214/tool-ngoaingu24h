@@ -26,6 +26,9 @@ def GetAllVideoInCourseById(id):
     name_course = r_name[0]["name"]
     try:
         os.mkdir(name_course)
+    except:
+        pass
+    try:
         os.makedirs(name_course+"/videos")
     except:
         pass
@@ -71,4 +74,4 @@ def GetAllVideoInCourseById(id):
 
 
 
-GetAllVideoInCourseById("5958158015004672")
+GetAllVideoInCourseById("5163948594692096")

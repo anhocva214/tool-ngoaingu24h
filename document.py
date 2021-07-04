@@ -44,7 +44,7 @@ def GetAllDocsInCourseById(id):
             name = doc["title"]
         try:
             url = doc["url"]
-            name = name.replace("(","[").replace(")","]").replace("/","-")
+            name = name.replace("(","[").replace(")","]").replace("/","").replace(":","").replace('"',"")
             print(name)
             print(url)
             doc_res = requests.get(url)
@@ -58,4 +58,4 @@ def GetAllDocsInCourseById(id):
 
 
 
-GetAllDocsInCourseById("5671445459894272")
+GetAllDocsInCourseById("5163948594692096")

@@ -1,12 +1,21 @@
-POST https://ngoaingu24h.vn/get-documents-by-course-id
+# POST https://ngoaingu24h.vn/get-documents-by-course-id
 # POST https://ngoaingu24h.vn/get-path-by-id
 # POST https://ngoaingu24h.vn/get-user-exam-info
 # POST https://ngoaingu24h.vn/get-topic-child-by-ids
-# content-length: 43
+# POST https://ngoaingu24h.vn/get-childs-topics
+POST https://ngoaingu24h.vn/join-course
+# POST https://ngoaingu24h.vn/get-roles
+# POST https://ngoaingu24h.vn/register
+# POST https://ngoaingu24h.vn/update-user-info
+content-length: 200
 content-type: application/x-www-form-urlencoded; charset=UTF-8
-# cookie: JSESSIONID=0cB7Nfjo_hRRZrpgpAHN1g; koolsoft-loxo-web--session-id--local=0cB7Nfjo_hRRZrpgpAHN1g; show_fisrt_access_website=true
 
-courseId=5671445459894272&offset=0&limit=9999
+# userId=tackecon&account=tackecon&name=tackecon&email=tackecon1551@gmail.com&phone=0123456789&province=1&school=1&degree=1&expectedScore=0&description=1&birth=1&checkSum=
+# cookie: JSESSIONID=0cB7Nfjo_hRRZrpgpAHN1g; koolsoft-loxo-web--session-id--local=0cB7Nfjo_hRRZrpgpAHN1g; show_fisrt_access_website=true
+# courseId=5958158015004672&offset=0&limit=9999
 # courseId=5958158015004672&topicId=5590995047546880&pathIds%5B%5D=-1
-# courseId=5820662448914432&userId=1142157472876776
-# courseId=5958158015004672&parentId=5590995047546880&userId=tackecon
+# courseId=5671445459894272&userId=1142157472876776
+# courseId=5671445459894272&parentId=4731414526296064&userId=tackecon
+# courseId=5652135414857728&offset=0&userId=tackecon
+courseId=5958158015004672&codeId=&status=3&sessionId=0cB7Nfjo_hRRZrpgpAHN1g
+
