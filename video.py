@@ -37,23 +37,38 @@ def GetAllVideoInCourseById(id):
     
 
     videos = response
+    link_file = open("./"+name_course+"/videos/links.txt", "w")
+    i = 0
     for video in videos:
+        i += 1
         name = video["name"]
         start = video["description"].find("https://ngonngu.vncdn.vn")
         end = video["description"].find("m3u8")
         url = video["description"][start:end+4]
         print(name)
         print(url)
+        
         try:
-            doc_res = requests.get(url)
-            filename = Path("./"+name_course+"/videos/"+name+".m3u8")
-            filename.write_bytes(doc_res.content)
+            # doc_res = requests.get(url)
+            # filename = Path("./"+name_course+"/videos/"+str(i)+" - "+name+".m3u8")
+            # filename.write_bytes(doc_res.content)
+        
+            if len(url.strip()) > 0:
+                item = {
+                    "name": name,
+                    "url": url
+                }
+                item = json.dumps(item)
+                link_file.write(str(item)+"\n")
         except:
             pass
+
+    link_file.close()
+
 
 
     print("Đã xong.")
 
 
 
-GetAllVideoInCourseById("id")
+GetAllVideoInCourseById("5958158015004672")

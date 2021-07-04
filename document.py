@@ -24,6 +24,7 @@ def GetAllDocsInCourseById(id):
     # print(r_name[0])
     name_course = r_name[0]["name"]
     try:
+        os.mkdir(name_course)
         os.mkdir(name_course+"/documents")
     except:
         pass
@@ -41,16 +42,20 @@ def GetAllDocsInCourseById(id):
             name = j[0]["fileName"]
         except:
             name = doc["title"]
-        url = doc["url"]
-        print(name)
-        print(url)
-        doc_res = requests.get(url)
-        filename = Path("./"+name_course+"/documents/"+name)
-        filename.write_bytes(doc_res.content)
+        try:
+            url = doc["url"]
+            name = name.replace("(","[").replace(")","]").replace("/","-")
+            print(name)
+            print(url)
+            doc_res = requests.get(url)
+            filename = Path("./"+name_course+"/documents/"+name)
+            filename.write_bytes(doc_res.content)
+        except:
+            pass
 
 
     print("Đã xong.")
 
 
 
-GetAllDocsInCourseById("5958158015004672")
+GetAllDocsInCourseById("5671445459894272")
